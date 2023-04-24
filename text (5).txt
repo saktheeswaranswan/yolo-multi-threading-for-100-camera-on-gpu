@@ -1,0 +1,61 @@
+let video;
+let points = [
+  { x: 337, y: 186 },
+  { x: 180, y: 232 },
+  { x: 302, y: 126 },
+  { x: 484, y: 106 },
+  { x: 542, y: 195 },
+  { x: 329, y: 270 },
+  { x: 225, y: 165 },
+  { x: 347, y: 52 },
+  { x: 516, y: 86 },
+  { x: 435, y: 193 },
+  { x: 175, y: 212 },
+  { x: 337, y: 73 },
+  { x: 445, y: 188 },
+  { x: 229, y: 302 },
+  { x: 192, y: 280 },
+  { x: 255, y: 208 },
+  { x: 462, y: 137 },
+  { x: 478, y: 213 },
+  { x: 355, y: 269 },
+  { x: 226, y: 258 },
+  { x: 233, y: 192 },
+  { x: 337, y: 186 },
+];
+
+let currentPoint = 0;
+let pointTimeout;
+
+function setup() {
+  createCanvas(640, 480);
+  video = createCapture(VIDEO);
+  video.size(width, height);
+  video.hide();
+  displayNextPoint();
+}
+
+function draw() {
+  image(video, 0, 0, width, height);
+  fill(255, 0, 0);
+  ellipse(points[currentPoint].x, points[currentPoint].y, 20, 20);
+}
+
+function displayNextPoint() {
+  pointTimeout = setTimeout(() => {
+    currentPoint++;
+    if (currentPoint >= points.length) {
+      currentPoint = 0;
+    }
+    displayNextPoint();
+  }, 500);
+}
+
+function mousePressed() {
+  clearTimeout(pointTimeout);
+  currentPoint++;
+  if (currentPoint >= points.length) {
+    currentPoint = 0;
+  }
+  displayNextPoint();
+}
