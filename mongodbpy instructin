@@ -1,0 +1,13 @@
+Please note that you need to replace the placeholders "YOUR_API_KEY", "YOUR_AUTH_DOMAIN", "YOUR_DATABASE_URL", "YOUR_PROJECT_ID", "YOUR_STORAGE_BUCKET", "YOUR_MESSAGING_SENDER_ID", "YOUR_APP_ID", "localhost", "yourusername", "yourpassword", "yourdatabase", and "yourmongodb" with your actual Firebase and MongoDB configuration details.
+
+write a python code yolo object detection using yolo-tiny.weights,yolo-tiny.cfg,coco.names so that crop the images and put it in a folder in mongodb and firebase in local and cloud  and log the dtetection in csv and sqland save it in fire base with time stamp of the detection  in live web cam detection i said just as firebase sql csv mongodb is also important so do it correctly
+
+write a python code yolo object detection using yolo-tiny.weights,yolo-tiny.cfg,coco.names so that crop the images and put it in a folder in mongodb and firebase in local and cloud  and log the dtetection in csv and sqland save it in fire base with time stamp of the detection  in live web cam detection i said just as firebase sql csv mongodb is also important so do it correctly with non maximum supression
+
+add cuda inference to it write a python code yolo object detection using yolo-tiny.weights,yolo-tiny.cfg,coco.names so that crop the images and put it in a folder in mongodb and firebase in local and cloud  and log the dtetection in csv and sqland save it in fire base with time stamp of the detection  in live web cam detection i said just as firebase sql csv mongodb is also important so do it correctly with non maximum supression
+
+In this code, the YOLO model is loaded using OpenCV's dnn module. It performs object detection on each frame from the webcam feed. Detected objects are cropped and saved in a folder on your local machine. The detections are logged in a CSV file and saved in both MongoDB and Firebase with a timestamp. The SQLite database is used to save the detections as well.
+
+Please make sure to replace 'mongodb://localhost:27017/' with your actual MongoDB connection string and 'https://your-database-url.firebaseio.com/' with your Firebase database URL. Also, ensure you have the correct paths to the YOLO files, Firebase credentials, and the desired folder paths for saving images, CSV, and SQLite database.
+
+Feel free to modify the code to suit your specific requirements.

@@ -1,0 +1,7 @@
+Make sure to replace 'your_username' and 'your_password' in the code with your actual MySQL username and password.
+
+Note that you need to have the necessary SQL tables created beforehand. The class_mapping table should have columns class_name and class_num, and the thresholds table should have columns class_name, start_time, and end_time.
+
+Remember to have the YOLOv5 weights (yolov5s.pt) and the required YAML file (data/coco128.yaml) in the same directory as the Python code.
+
+Let me know if you have any further questions!

@@ -1,0 +1,52 @@
+To install and set up MySQL on Ubuntu, you can follow these steps:
+
+Install MySQL by running the following command:
+
+arduino
+Copy code
+sudo apt-get install mysql-server
+During the installation, you'll be prompted to set a password for the MySQL root user.
+
+After the installation is complete, start the MySQL service:
+
+sql
+Copy code
+sudo service mysql start
+Connect to the MySQL server using the MySQL client:
+
+css
+Copy code
+mysql -u root -p
+Enter your MySQL root password when prompted.
+
+Once connected to the MySQL server, create a new database and a user for accessing the database:
+
+sql
+Copy code
+CREATE DATABASE detection_results;
+CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON detection_results.* TO 'your_username'@'localhost';
+FLUSH PRIVILEGES;
+To install and set up MySQL on Windows:
+
+Download the MySQL Installer from the official MySQL website.
+
+Run the installer and choose the "Custom" installation type.
+
+Select the MySQL Server and MySQL Workbench components.
+
+Proceed with the installation and follow the prompts to set a password for the MySQL root user.
+
+Once the installation is complete, open MySQL Workbench.
+
+Connect to the MySQL server using the root user and the password you set during installation.
+
+In MySQL Workbench, create a new database and a user for accessing the database:
+
+sql
+Copy code
+CREATE DATABASE detection_results;
+CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON detection_results.* TO 'your_username'@'localhost';
+FLUSH PRIVILEGES;
+After setting up the database, you can run the Python code to perform object detection, log the results in the SQL database with timestamps, and save cropped images in the specified folder.

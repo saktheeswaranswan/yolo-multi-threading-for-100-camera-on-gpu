@@ -1,0 +1,47 @@
+Now, to install MySQL on Ubuntu and Windows:
+
+Ubuntu:
+
+Open a terminal and update the package lists by running:
+sql
+Copy code
+sudo apt-get update
+Install MySQL Server by running:
+arduino
+Copy code
+sudo apt-get install mysql-server
+During the installation process, you will be prompted to set a root password for MySQL.
+
+Start the MySQL service by running:
+
+sql
+Copy code
+sudo service mysql start
+Windows:
+
+Download the MySQL installer from the official MySQL website: https://dev.mysql.com/downloads/installer/
+
+Run the installer and follow the on-screen instructions. Choose the "Developer Default" installation type, which includes MySQL Server.
+
+During the installation process, you will be prompted to set a root password for MySQL.
+
+Start the MySQL service by opening the "Services" application (Press Win + R, then type services.msc and hit Enter), find "MySQL" in the list, and start the service.
+
+After installing MySQL, you can create the database and table required by the code by running the following SQL commands:
+
+sql
+Copy code
+CREATE DATABASE object_detection;
+
+USE object_detection;
+
+CREATE TABLE IF NOT EXISTS detections (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  timestamp DATETIME,
+  object_class VARCHAR(255)
+);
+Make sure to replace 'your_username' and 'your_password' in the Python code with your actual MySQL username and password.
+
+Remember to have the YOLOv3-tiny weights (yolov3-tiny.weights), configuration file (yolov3-tiny.cfg), and class names file (coco.names) in the same directory as the Python code.
+
+I hope this helps! Let me know if you have any further questions.
